@@ -1,19 +1,16 @@
-#Make a Username Generator from first and last names.
-
 import random
-def generator(first_name,last_name):
-    
-    first_name=first_name.lower()
-    last_name=last_name.lower()
-    
-    first_name=first_name[:3]
-    
+
+def generator(first_name, last_name):
+    first_name = first_name.lower()[:3]   
+    last_name = last_name.lower()
+
     username = f"{first_name}{last_name}"
-    username+=str(random.randint(10,99))
-    
+    username += str(random.randint(10, 99))  
+    username += random.choice(['@', '/', '$'])  
+
     return username
 
-first=str(input('Enter first name: '))
-last=str(input('Enter last name: '))
-username=generator(first,last)
-print(f" username for {first} {last}: {username}")
+first = input('Enter first name: ')
+last = input('Enter last name: ')
+username = generator(first, last)
+print(f"Username for {first} {last}: {username}")
