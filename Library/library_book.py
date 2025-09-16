@@ -11,6 +11,7 @@ def add_book():
     }
     library.append(library_book)
     print("Book Added*")
+    
 def issue_book():
     if not library:
         print("Sorry!! No books available to issue!!!")
